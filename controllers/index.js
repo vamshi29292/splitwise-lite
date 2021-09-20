@@ -1,5 +1,6 @@
-const users = require('./users');
+const usersController = require('./users');
+const transactionsController = require('./transactions');
 
 module.exports = {
-  usersController: users,
+  usersController, transactionsController,
 }
