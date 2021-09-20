@@ -4,4 +4,6 @@ const { transactionsController } = require('../controllers');
 
 router.post('/', transactionsController.create);
 
+router.get('/:id', transactionsController.getById);
+
 module.exports = router;
