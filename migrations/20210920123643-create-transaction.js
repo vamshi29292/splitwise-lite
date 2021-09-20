@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.ENUM('equal', 'exact', 'percentages'),
         defaultValue: 'equal',
       },
+      isActive: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -28,7 +32,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
+      }
     });
   },
   down: async (queryInterface, Sequelize) => {

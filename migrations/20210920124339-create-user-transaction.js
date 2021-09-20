@@ -8,17 +8,21 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      transaction_id: {
+      transactionId: {
         type: Sequelize.INTEGER
       },
-      amount_paid: {
+      amountPaid: {
         type: Sequelize.DECIMAL
       },
-      user_split: {
+      userSplit: {
         type: Sequelize.DECIMAL
+      },
+      isActive: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       createdAt: {
         allowNull: false,

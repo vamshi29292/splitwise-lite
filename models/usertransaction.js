@@ -16,10 +16,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   UserTransaction.init({
-    user_id: DataTypes.INTEGER,
-    transaction_id: DataTypes.INTEGER,
-    amount_paid: DataTypes.DECIMAL,
-    user_split: DataTypes.DECIMAL
+    userId: DataTypes.INTEGER,
+    transactionId: DataTypes.INTEGER,
+    amountPaid: DataTypes.DECIMAL,
+    userSplit: DataTypes.DECIMAL,
+    isActive: { type: DataTypes.BOOLEAN, defaultValue: true },
   }, {
     sequelize,
     modelName: 'UserTransaction',
