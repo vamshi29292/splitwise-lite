@@ -14,7 +14,7 @@ const getById = async (req, res) => {
   try {
     const result = await Transaction.findByPk(req.params.id, {
       include: [
-        { model: User, through: { attributes: ["amountPaid", "userSplit"]}, attributes: ["id", "name", "email"] }
+        { model: User, through: { attributes: ["amountPaid", "userSplit"]}, attributes: ["id", "name", "email"], all: true }
       ]
     });
     res.status(200).json(result);
